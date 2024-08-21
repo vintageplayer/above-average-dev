@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
 
-  "name": "Chrome Extension TypeScript Starter",
-  "description": "Chrome Extension, TypeScript, Visual Studio Code",
+  "name": "Above Average Developer",
+  "description": "Extension to track commit stats to stay accountable",
   "version": "1.0",
 
   "options_ui": {
@@ -11,15 +11,9 @@
 
   "action": {
     "default_icon": "icon.png",
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_title": "Above Average Developer"
   },
-
-  "content_scripts": [
-      {
-          "matches": ["<all_urls>"],
-          "js": ["js/vendor.js", "js/content_script.js"]
-      }
-  ],
 
   "background": {
     "service_worker": "js/background.js"
@@ -27,9 +21,5 @@
 
   "permissions": [
     "storage"
-  ],
-
-  "host_permissions": [
-    "<all_urls>"
   ]
 }
